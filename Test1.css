@@ -1,0 +1,95 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #222333;
+}
+.container .loader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.2rem;
+    font-weight: 700;
+    font-variant: small-caps;
+    color: #fff;
+}
+.container .loader h1{
+    /* background: conic-gradient(
+        #f0b520 0 25%,
+        #4750cb 25% 50%,
+        #e162b8 50% 75%,
+        #57d16b 75% 100%
+    );  */
+    background: linear-gradient(
+        to right,#e98556 0 25%,
+        #4f59ea 25% 50%,
+        #e94bb7 50% 75%,
+        #52ec6c 75% 100%
+    );
+    background-size: 200% 200%;
+    animation: animate 3s ease infinite;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.container .loader h2{
+    /* background: conic-gradient(
+        #f0b520 0 25%,
+        #4750cb 25% 50%,
+        #e162b8 50% 75%,
+        #57d16b 75% 100%
+    );  */
+    background: linear-gradient(
+        to right,#ec3371 0 25%,
+        #3fdd49 25% 50%,
+        #2d9feb 50% 75%,
+        #9c4fef 75% 100%
+    );
+    background-size: 200% 200%;
+    animation: animate 3s ease infinite;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+@keyframes animate{
+    25%{
+        background-position: 0 100%;
+    }
+    50%{
+        background-position: 100% 100%;
+    }
+    75%{
+        background-position: 100% 0%;
+    }
+    100%{
+        background-position: 0% 0%;
+    }
+}
+@media only screen and (max-width:768px){
+    .container .loader{
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width:400px){
+    .container .loader{
+        font-size: 1.7rem;
+    }
+}
+@media only screen and (max-width:350px){
+    .container .loader{
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width:300px){
+    .container .loader{
+        font-size: 1.2rem;
+    }
+}
